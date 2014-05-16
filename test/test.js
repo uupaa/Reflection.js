@@ -14,6 +14,8 @@ return new Test("Reflection", {
     }).add([
         testReflection_resolvePathToFunction,
         testReflection_resolveFunctionToPath,
+        testReflection_unknown,
+//ok    testReflection_invalidType,
     ]).run().clone();
 
 function testReflection_resolvePathToFunction(next) {
@@ -39,6 +41,31 @@ function testReflection_resolveFunctionToPath(next) {
         next && next.miss();
     }
 }
+
+function testReflection_unknown(next) {
+
+    var result = Reflection.resolve("Unknown.keyword"); // { path, fn }
+
+    if (result.path === "Unknown.keyword" &&
+        result.fn   === null) {
+        next && next.pass();
+    } else {
+        next && next.miss();
+    }
+}
+
+/* ok
+function testReflection_invalidType(next) {
+
+    try {
+        Reflection.resolve(/a/); // -> throw Error
+        next && next.miss();
+    } catch (o_o) {
+        next && next.pass();
+    }
+}
+ */
+
 
 })((this || 0).self || global);
 
