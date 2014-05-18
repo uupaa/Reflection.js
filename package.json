@@ -1,7 +1,7 @@
 {
   "name":           "uupaa.reflection.js",
-  "version":        "0.0.3",
-  "description":    "Function reflection.",
+  "version":        "0.0.4",
+  "description":    "WebModule reflection.",
   "url":            "https://github.com/uupaa/Reflection.js",
   "keywords":       ["Refrection", "util", "uupaa", "WebModule", "Incomplete"],
   "repository": {

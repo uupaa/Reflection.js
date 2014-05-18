@@ -4,7 +4,7 @@ Reflection.js
 
 ![](https://travis-ci.org/uupaa/Reflection.js.png)
 
-Function reflection.
+WebModule reflection.
 
 # Document
 
