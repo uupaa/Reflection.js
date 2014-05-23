@@ -31,5 +31,16 @@ __history = [
       "sloc": 450,
       "maintainability": "66.17"
     }
+  },
+  {
+    "date": "Fri, 23 May 2014 13:32:01 GMT",
+    "total": {
+      "sloc": 516,
+      "maintainability": 65.45509306715783
+    },
+    "average": {
+      "sloc": 516,
+      "maintainability": "65.46"
+    }
   }
 ]
