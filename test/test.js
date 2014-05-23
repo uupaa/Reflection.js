@@ -16,6 +16,7 @@ return new Test("Reflection", {
         testReflection_resolveFunctionToPath,
         testReflection_unknown,
 //ok    testReflection_invalidType,
+        testReflection_syntaxHighlight,
     ]).run().clone();
 
 function testReflection_resolvePathToFunction(next) {
@@ -65,6 +66,16 @@ function testReflection_invalidType(next) {
     }
 }
  */
+
+function testReflection_syntaxHighlight(next) {
+    console.log.apply(console, Reflection.syntaxHighlight(Reflection.syntaxHighlight + "", "body"));
+
+    if ( 1 ) {
+        next && next.pass();
+    } else {
+        next && next.miss();
+    }
+}
 
 
 })((this || 0).self || global);
