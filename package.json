@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.reflection.js",
-  "version":        "0.0.11",
+  "version":        "0.0.12",
   "description":    "WebModule reflection.",
   "url":            "https://github.com/uupaa/Reflection.js",
   "keywords":       ["Refrection", "util", "uupaa", "WebModule", "Unstable"],
@@ -21,7 +21,7 @@
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "files":        ["lib/Reflection.js"],
+    "source":       ["lib/Reflection.js"],
     "output":       "release/Reflection.min.js",
     "target":       ["all"],
     "labels":       ["@dev"],
