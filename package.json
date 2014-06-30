@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.reflection.js",
-  "version":        "0.0.14",
+  "version":        "0.0.15",
   "description":    "WebModule reflection.",
   "url":            "https://github.com/uupaa/Reflection.js",
   "keywords":       ["Refrection", "util", "uupaa", "WebModule", "Unstable"],
@@ -28,7 +28,7 @@
     "source":       ["lib/Reflection.js"],
     "output":       "release/Reflection.min.js",
     "target":       ["all"],
-    "labels":       ["@dev"],
+    "label":        ["@dev"],
     "module": {
       "develop":    [],
       "release":    []
