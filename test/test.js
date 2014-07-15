@@ -19,61 +19,61 @@ return new Test("Reflection", {
         testReflection_syntaxHighlight,
     ]).run().clone();
 
-function testReflection_resolvePathToFunction(next) {
+function testReflection_resolvePathToFunction(test, pass, miss) {
 
     var result = Reflection.resolve("Object.freeze"); // { path, fn }
 
     if (result.path === "Object.freeze" &&
         result.fn   ===  Object.freeze) {
-        next && next.pass();
+        test.done(pass());
     } else {
-        next && next.miss();
+        test.done(miss());
     }
 }
 
-function testReflection_resolveFunctionToPath(next) {
+function testReflection_resolveFunctionToPath(test, pass, miss) {
 
     var result = Reflection.resolve(Object.freeze); // { path, fn }
 
     if (result.path === "Object.freeze" &&
         result.fn   ===  Object.freeze) {
-        next && next.pass();
+        test.done(pass());
     } else {
-        next && next.miss();
+        test.done(miss());
     }
 }
 
-function testReflection_unknown(next) {
+function testReflection_unknown(test, pass, miss) {
 
     var result = Reflection.resolve("Unknown.keyword"); // { path, fn }
 
     if (result.path === "Unknown.keyword" &&
         result.fn   === null) {
-        next && next.pass();
+        test.done(pass());
     } else {
-        next && next.miss();
+        test.done(miss());
     }
 }
 
 /* ok
-function testReflection_invalidType(next) {
+function testReflection_invalidType(test, pass, miss) {
 
     try {
         Reflection.resolve(/a/); // -> throw Error
-        next && next.miss();
+        test.done(miss());
     } catch (o_o) {
-        next && next.pass();
+        test.done(pass());
     }
 }
  */
 
-function testReflection_syntaxHighlight(next) {
+function testReflection_syntaxHighlight(test, pass, miss) {
     console.log.apply(console, Reflection.syntaxHighlight(Reflection.syntaxHighlight + "", "body"));
 
     if ( 1 ) {
-        next && next.pass();
+        test.done(pass());
     } else {
-        next && next.miss();
+        test.done(miss());
     }
 }
 

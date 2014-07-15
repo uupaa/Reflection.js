@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.reflection.js",
-  "version":        "0.0.15",
+  "version":        "0.0.16",
   "description":    "WebModule reflection.",
   "url":            "https://github.com/uupaa/Reflection.js",
   "keywords":       ["Refrection", "util", "uupaa", "WebModule", "Unstable"],
@@ -22,6 +22,7 @@
     "server":       "http-server -c-1 -p 8585 &",
     "server-stop":  "",
     "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
+    "hint":         "jshint lib/*.js",
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "uupaa.nodemodule.js": "",
+    "uupaa.iphonesimulator.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
