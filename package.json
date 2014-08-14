@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.reflection.js",
-  "version":        "0.0.16",
+  "version":        "0.0.17",
   "description":    "WebModule reflection.",
   "url":            "https://github.com/uupaa/Reflection.js",
   "keywords":       ["Refrection", "util", "uupaa", "WebModule", "Unstable"],
@@ -9,6 +9,7 @@
     "url":          "https://github.com/uupaa/Reflection.js.git"
   },
   "scripts": {
+    "init":         "npm update; npm run build; npm run test-page",
     "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
